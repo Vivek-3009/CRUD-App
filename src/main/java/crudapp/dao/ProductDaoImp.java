@@ -15,11 +15,11 @@ public class ProductDaoImp implements ProductDao{
 	@Autowired
 	private HibernateTemplate hibernateTemplate;
 	
-	//create
+	//create or update
 
 	@Transactional
 	public void create(Product product) {
-		this.hibernateTemplate.save(product);
+		this.hibernateTemplate.saveOrUpdate(product);
 		
 	}
 	
@@ -42,7 +42,7 @@ public class ProductDaoImp implements ProductDao{
 	//get single product
 
 	public Product getProduct(int pId) {
-		Product product =this.hibernateTemplate.load(Product.class, pId);
+		Product product =this.hibernateTemplate.get(Product.class, pId);
 		return product;
 	}
 

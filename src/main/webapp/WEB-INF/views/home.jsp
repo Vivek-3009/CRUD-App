@@ -12,10 +12,10 @@
 		<div class="row">
 			<div class="col-md-12">
 
-				<h1 class="text-center" mb-3>Welcome to Product App</h1>
+				<h1 class="text-center mb-3">Welcome to Product App</h1>
 				<div class=m-3>
-				<table class="table">
-					<thead class="table-dark">
+				<table class="table m-3">
+					<thead class="table-dark ">
 						<tr>
 							<th scope="col">ID</th>
 							<th scope="col">Product Name</th>
@@ -27,11 +27,15 @@
 					<tbody>
 						<c:forEach items="${product }" var="p" >
 							<tr>
-								<th scope="row">${p.id }</th>
+								<th scope="row">TECH${p.id }</th>
 								<td>${p.name }</td>
 								<td>${p.description }</td>
 								<td class="fw-bold">&#8377; ${p.price }</td>
-								<td>asd</td>
+								<td >
+								<a href="update/${p.id }"><i class="fa-solid fa-pen" ></i></a>
+								<a href="delete/${p.id }"><i class="fa-solid fa-trash text-danger"></i></a>
+								
+								</td>
 							</tr>
 						</c:forEach>
 						

@@ -19,7 +19,7 @@ public class Product {
 	}
 	public Product(int id, String name, String description, long price) {
 		super();
-		id = id;
+		this.id = id;
 		this.name = name;
 		this.description = description;
 		this.price = price;
@@ -28,7 +28,7 @@ public class Product {
 		return id;
 	}
 	public void setId(int id) {
-		id = id;
+		this.id = id;
 	}
 	public String getName() {
 		return name;
@@ -52,5 +52,6 @@ public class Product {
 	public String toString() {
 		return "Product [id=" + id + ", name=" + name + ", description=" + description + ", price=" + price + "]";
 	}
+	
 	
 }

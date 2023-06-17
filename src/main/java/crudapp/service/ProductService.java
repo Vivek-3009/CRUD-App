@@ -20,4 +20,11 @@ public class ProductService {
 	public List<Product> getAllProducts(){
 		return this.daoImp.getAllProducts();
 	}
+	public void delete(int pId) {
+		this.daoImp.delete(pId);
+	}
+	public Product getProduct(int pId) {
+		return this.daoImp.getProduct(pId);
+	}
+	
 }
